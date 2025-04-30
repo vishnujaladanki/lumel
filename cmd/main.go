@@ -25,7 +25,7 @@ func start() error {
 		return fmt.Errorf("connecting to db %w", err)
 	}
 	svc, err := service.NewService(db)
-	svc.ReadDataFromCSV("lumel assesment/lumel.csv")
+	svc.ReadDataFromCSV("C:/Users/JaVi204/OC/lumel assesment/lumel.csv")
 	api := api.NewAPI(svc)
 
 	http.HandleFunc("/total_customers", api.GetTotalCustomersHandler)
